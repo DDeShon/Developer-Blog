@@ -10,16 +10,17 @@
       integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
       crossorigin="anonymous"
     />
+    <link href="/public/assets/styles.css" rel="stylesheet" type="text/css" />
     <title>Software Development Blog</title>
   </head>
   <body>
     <div class="container">
       <h1 class="mb-1"><%= article.title %></h1>
-      <div class="text-muted mb-2">
-        <%= article.createdOn.toLocaleDateString() %>
-      </div>
-      <a href="/" class="btn btn-secondary">All Articles</a>
-      <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
+      <div class="mb-2"><%= article.createdOn.toLocaleDateString() %></div>
+      <a href="/" class="btn btn-secondary mb-5">All Articles</a>
+      <a href="/articles/edit/<%= article.id %>" class="btn btn-info mb-5"
+        >Edit</a
+      >
 
       <div><%- article.sanitizedHtml %></div>
     </div>
